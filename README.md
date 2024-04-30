@@ -46,7 +46,7 @@ local keys = {
 				}
 			end)
 		end,
-		desc = "scroll down",
+		desc = "scroll up",
 	},
 }
 ```
