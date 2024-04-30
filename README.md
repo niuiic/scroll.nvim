@@ -2,7 +2,7 @@
 
 Smooth scroll for neovim.
 
-- Custom smooth curve.
+- Custom smooth strategy.
 - Keep simple, keep reliable.
 
 ## Usage
@@ -28,6 +28,7 @@ local keys = {
 			end)
 		end,
 		desc = "scroll down",
+		mode = { "x", "n" },
 	},
 	{
 		"<C-u>",
@@ -47,6 +48,7 @@ local keys = {
 			end)
 		end,
 		desc = "scroll up",
+		mode = { "x", "n" },
 	},
 }
 ```
