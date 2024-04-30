@@ -1,7 +1,11 @@
+local scroll_count = 0
+
 --- smooth scroll
 ---@param target_line number
 ---@param step fun(current_line) {next_line: number, delay: number}
 local scroll = function(target_line, step)
+	scroll_count = scroll_count + 1
+	local current_count = scroll_count
 	local line_count = vim.api.nvim_buf_line_count(0)
 	local start_line = vim.api.nvim_win_get_cursor(0)[1]
 	local column = vim.api.nvim_win_get_cursor(0)[2]
@@ -23,6 +27,10 @@ local scroll = function(target_line, step)
 
 	local scroll_step
 	scroll_step = function()
+		if scroll_count ~= current_count then
+			return
+		end
+
 		if scroll_direction == "down" and current_line >= end_line then
 			return
 		end
