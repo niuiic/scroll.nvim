@@ -22,6 +22,7 @@ local keys = {
 			require("scroll").scroll(target_line, function(current_line)
 				return {
 					next_line = current_line + step,
+					-- 10ms
 					delay = 10,
 				}
 			end)
@@ -52,4 +53,4 @@ local keys = {
 
 ## Config
 
-No configuration available.
+No configuration options available.
