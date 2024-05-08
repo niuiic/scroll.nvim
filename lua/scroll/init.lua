@@ -56,7 +56,10 @@ local scroll = function(target_line, step)
 			return
 		end
 
-		vim.api.nvim_win_set_cursor(0, { next_line, column })
+		local ok = pcall(vim.api.nvim_win_set_cursor, 0, { next_line, column })
+		if not ok then
+			return
+		end
 		current_line = next_line
 		vim.defer_fn(scroll_step, cur_step.delay)
 	end
