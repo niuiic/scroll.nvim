@@ -5,6 +5,8 @@ Smooth scroll for neovim.
 - Custom smooth strategy.
 - Keep simple, keep reliable.
 
+[More neovim plugins](https://github.com/niuiic/awesome-neovim-plugins)
+
 ## Usage
 
 ```lua
